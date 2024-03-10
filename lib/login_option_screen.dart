@@ -81,29 +81,35 @@ class _LoginOptionScreenState extends State<LoginOptionScreen> {
           ),
         ],
       ),
-      bottomNavigationBar: Row(
-        children: [
-          const SizedBox(width: 70),
-          const Text(
-            "Don't have an account ?",
-            style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 15,
-                color: Colors.black45),
-          ),
-          TextButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SignUpScreen()));
-              },
-              child: const Text(
-                "Sign up.",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15,
-                    color: Colors.black),
-              ))
-        ],
+      bottomNavigationBar: Container(
+        height: 70,
+        width: double.infinity,
+        decoration: const BoxDecoration(
+            border: Border(top: BorderSide(color: Colors.black12))),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Text(
+              "Don't have an account ?",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                  color: Colors.black45),
+            ),
+            TextButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SignUpScreen()));
+                },
+                child: const Text(
+                  "Sign up.",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                      color: Colors.black),
+                ))
+          ],
+        ),
       ),
     );
   }
